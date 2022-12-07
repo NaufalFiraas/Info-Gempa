@@ -1,8 +1,60 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding: 50px;
+  background: linear-gradient(to bottom, #EAEAEA, #808080);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.jumbotron {
+  height: 95vh;
+}
+.jumbotron h1 {
+  text-align: center;
+  font-size: 3.1rem;
+  letter-spacing: 5%;
+}
+.jumbotron img#earth {
+  width: 27rem;
+  height: 27rem;
+  display: block;
+  margin: 15px auto;
+}
+.jumbotron p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 5%;
+  text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5647058824);
+}
+.jumbotron p a {
+  color: #11E2FF;
+}
+.jumbotron a#icon-arrow {
+  display: block;
+  text-align: center;
+  margin: 20px auto 0;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+.jumbotron a#icon-arrow img {
+  width: 3rem;
+  height: 3rem;
+}
+.jumbotron a#icon-arrow:hover {
+  transform: translateY(-5px);
 }
 
 /*# sourceMappingURL=main.css.map */
