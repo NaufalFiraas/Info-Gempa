@@ -1,11 +1,14 @@
 @use 'variables';
 @use 'globals';
 
-// Jumbotron
+// JUMBOTRON
 @use 'modules/jumbotron/jumbotron';
 @use 'modules/jumbotron/jumbotronResponsive';
 
-// Content Window
+// CONTENT WINDOW
 // General
 @use 'modules/content-window/general/contentWindowGeneral';
 @use 'modules/content-window/general/contentWindowGeneralResponsive';
+
+// Gempa Terkini
+@use 'modules/content-window/terkini/terkini';
