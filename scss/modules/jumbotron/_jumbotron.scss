@@ -1,9 +1,11 @@
 .jumbotron {
     height: 95vh;
-    // background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h1 {
-        text-align: center;
         font-size: 3.1rem;
         letter-spacing: 5%;
     }
@@ -11,8 +13,7 @@
     img#earth {
         width: 27rem;
         height: 27rem;
-        display: block;
-        margin: 15px auto;
+        margin: 15px 0;
     }
 
     p {
@@ -29,9 +30,7 @@
     }
 
     a#icon-arrow {
-        display: block;
-        text-align: center;
-        margin: 20px auto 0;
+        margin: 20px 0;
         transition: all 0.3s ease;
         width: fit-content;
 
