@@ -91,5 +91,41 @@ html {
     font-size: 1rem;
   }
 }
+.content-window {
+  height: 500px;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.4392156863);
+  background-color: white;
+}
+.content-window .toggle {
+  display: none;
+}
+.content-window .heading {
+  padding: 2rem 5rem;
+  background-color: #EAEAEA;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.content-window .heading ul {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+}
+.content-window .heading ul li {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  cursor: pointer;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.content-window .heading ul li:hover, .content-window .heading ul li.active {
+  background-color: #2D2C2C;
+  color: #11E2FF;
+}
 
 /*# sourceMappingURL=main.css.map */
