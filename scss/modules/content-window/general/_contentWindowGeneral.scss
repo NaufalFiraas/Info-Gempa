@@ -7,9 +7,7 @@
     box-shadow: 3px 4px 10px #00000070;
     background-color: white;
 
-    .toggle {
-        display: none;
-    }
+
 
     .heading {
         padding: 2rem 5rem;
@@ -17,7 +15,11 @@
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
 
-        ul {
+        .toggle {
+            display: none;
+        }
+
+        ul.heading-menu {
             display: flex;
             justify-content: center;
             gap: 5rem;
@@ -33,7 +35,8 @@
                 border-radius: 20px;
                 transition: all 0.2s ease;
 
-                &:hover, &.active {
+                &:hover,
+                &.active {
                     background-color: variables.$blackNavbarActive;
                     color: variables.$primaryBlue;
                 }

@@ -18,3 +18,9 @@ html {
     box-sizing: border-box;
     overflow: hidden;
 }
+
+@media (max-width: 750px) {
+    .container {
+        padding: 50px 10px;
+    }
+}
