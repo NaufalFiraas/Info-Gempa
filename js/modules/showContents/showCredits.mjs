@@ -3,11 +3,11 @@ export function showCredits() {
                 <ul>
                     <li>
                         <a
-                            href="https://www.freepik.com/free-vector/planet-earth_23665961.htm#query=earth&position=0&from_view=search&track=sph">Earth
+                            href="https://www.freepik.com/free-vector/planet-earth_23665961.htm#query=earth&position=0&from_view=search&track=sph" target="_blank">Earth
                             Image</a>
                     </li>
                     <li>
-                        <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow Circle Down
+                        <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons" target="_blank">Arrow Circle Down
                             Icon</a>
                     </li>
                 </ul>`;
