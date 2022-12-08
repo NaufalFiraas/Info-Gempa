@@ -1,0 +1,46 @@
+@use '../../../variables';
+
+.content-window {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 3px 4px 10px #00000070;
+    background-color: white;
+
+
+
+    .heading {
+        padding: 2rem 5rem;
+        background-color: variables.$linearTop;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        .toggle {
+            display: none;
+        }
+
+        ul.heading-menu {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            align-items: center;
+
+            li {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #3d3d3d;
+                cursor: pointer;
+                padding: 15px 30px;
+                text-align: center;
+                border-radius: 20px;
+                transition: all 0.2s ease;
+
+                &:hover,
+                &.active {
+                    background-color: variables.$blackNavbarActive;
+                    color: variables.$primaryBlue;
+                }
+            }
+        }
+    }
+}

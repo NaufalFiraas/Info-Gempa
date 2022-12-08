@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/earth.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Public+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <title>Info Gempa</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="jumbotron">
+            <h1>INFO GEMPA</h1>
+            <img src="images/earth.png" alt="earth" id="earth">
+            <p>Menampilkan informasi gempa bumi berdasarkan data dari <a href="https://data.bmkg.go.id/gempabumi/"
+                    target="_blank">BMKG</a href=""> </p>
+            <a href="#content-window" id="icon-arrow"><img src="images/icon-arrow.png" alt=""></a>
+        </div>
+        <div class="content-window" id="content-window">
+            <div class="heading">
+                <div class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="heading-menu">
+                    <li class="active">Gempa Terkini</li>
+                    <li>Gempa Dirasakan</li>
+                    <li>Gempa M 5.0+</li>
+                    <li>Credits</li>
+                </ul>
+            </div>
+            <div class="content gempa-terkini">
+                <div class="left">
+                    <h2>Gempa Bumi Terkini</h2>
+                    <div class="info-list">
+                        <p><strong>Tanggal:</strong> 06 Des 2022</p>
+                        <p><strong>Jam:</strong> 17:22:05 WIB</p>
+                        <p><strong>Koordinat:</strong> -10.58, 113.41</p>
+                        <p><strong>Magnitude:</strong> 5.3</p>
+                        <p><strong>Kedalaman:</strong> 10 Km</p>
+                        <p><strong>Wilayah:</strong> Pusat gempa berada di laut 44 km BaratDaya Kaimana</p>
+                        <p><strong>Potensi:</strong> Gempa ini dirasakan untuk diteruskan pada masyarakat</p>
+                    </div>
+                    <a href="">
+                        <button type="button" id="btn-show-maps">Lihat Maps</button>
+                    </a>
+                </div>
+                <div class="right">
+                    <img src="images/earth.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
