@@ -1,0 +1,27 @@
+@media (max-width: 450px) {
+    .gempa-dirasakan-m5 {
+        h2 {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .gempa-dirasakan-m5 {
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        .list-gempa {
+            .card-gempa {
+                min-width: 250px;
+
+                .info-list {
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
