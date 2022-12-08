@@ -299,22 +299,22 @@ html {
     height: 15rem;
   }
 }
-.gempa-dirasakan {
+.gempa-dirasakan-m5 {
   padding: 4rem 2rem;
 }
-.gempa-dirasakan h2 {
+.gempa-dirasakan-m5 h2 {
   text-align: center;
   font-size: 2.1rem;
   font-weight: 600;
   letter-spacing: 5%;
 }
-.gempa-dirasakan hr {
+.gempa-dirasakan-m5 hr {
   width: 150px;
   height: 2px;
   margin: 2rem auto;
   background-color: #808080;
 }
-.gempa-dirasakan .list-gempa {
+.gempa-dirasakan-m5 .list-gempa {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -323,7 +323,7 @@ html {
   column-gap: 10px;
   width: 100%;
 }
-.gempa-dirasakan .list-gempa .card-gempa {
+.gempa-dirasakan-m5 .list-gempa .card-gempa {
   padding: 15px;
   max-width: 30%;
   min-width: 300px;
@@ -331,20 +331,20 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.gempa-dirasakan .list-gempa .card-gempa img {
+.gempa-dirasakan-m5 .list-gempa .card-gempa img {
   margin-bottom: 15px;
   width: 60px;
   height: 60px;
 }
-.gempa-dirasakan .list-gempa .card-gempa .info-list {
+.gempa-dirasakan-m5 .list-gempa .card-gempa .info-list {
   text-align: center;
   margin-bottom: 10px;
 }
-.gempa-dirasakan .list-gempa .card-gempa .info-list p {
+.gempa-dirasakan-m5 .list-gempa .card-gempa .info-list p {
   font-size: 1rem;
   letter-spacing: 5%;
 }
-.gempa-dirasakan .list-gempa .card-gempa button {
+.gempa-dirasakan-m5 .list-gempa .card-gempa button {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 5%;
@@ -355,10 +355,27 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.gempa-dirasakan .list-gempa .card-gempa button:hover {
+.gempa-dirasakan-m5 .list-gempa .card-gempa button:hover {
   background-color: #2D2C2C;
   color: #11E2FF;
   border: 2px solid #11E2FF;
+}
+
+@media (max-width: 450px) {
+  .gempa-dirasakan-m5 h2 {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 400px) {
+  .gempa-dirasakan-m5 h2 {
+    font-size: 1.7rem;
+  }
+  .gempa-dirasakan-m5 .list-gempa .card-gempa {
+    min-width: 250px;
+  }
+  .gempa-dirasakan-m5 .list-gempa .card-gempa .info-list p {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
