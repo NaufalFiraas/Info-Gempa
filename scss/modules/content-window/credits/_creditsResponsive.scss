@@ -1,0 +1,23 @@
+@media (max-width: 450px) {
+    .credits {
+        h2 {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .credits {
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

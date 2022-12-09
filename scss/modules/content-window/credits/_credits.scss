@@ -1,0 +1,54 @@
+@use '../../../variables';
+
+.credits {
+    padding: 2rem;
+    box-sizing: border-box;
+    height: 80vh;
+    overflow-y: scroll;
+
+    h2 {
+        text-align: center;
+        font-size: 2.1rem;
+        font-weight: 600;
+        letter-spacing: 5%;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 2rem;
+
+        li {
+            a {
+                font-size: 1.2rem;
+                font-weight: 600;
+                letter-spacing: 5%;
+                color: black;
+                text-decoration: underline;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: variables.$primaryBlue;
+                }
+            }
+        }
+    }
+
+    a.source-code {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 5%;
+        color: black;
+        text-decoration: underline;
+        transition: all 0.2s ease;
+        text-align: center;
+
+        &:hover {
+            color: variables.$primaryBlue;
+        }
+    }
+}

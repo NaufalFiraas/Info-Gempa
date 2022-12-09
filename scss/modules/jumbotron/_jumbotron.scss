@@ -1,0 +1,47 @@
+.jumbotron {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 3.1rem;
+        letter-spacing: 5%;
+        text-shadow: 1px 4px 4px #00000090;
+    }
+
+    img#earth {
+        width: 24rem;
+        height: 24rem;
+        margin: 15px 0;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 5%;
+        text-shadow: 1px 4px 4px #00000090;
+
+        a {
+            color: #11E2FF;
+        }
+    }
+
+    a#icon-arrow {
+        margin: 20px 0;
+        transition: all 0.3s ease;
+        width: fit-content;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}

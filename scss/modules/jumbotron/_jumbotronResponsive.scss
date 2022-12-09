@@ -1,0 +1,46 @@
+@media (max-width: 750px) {
+    .jumbotron {
+        h1 {
+            font-size: 2.9rem;
+        }
+
+        img#earth {
+            width: 22rem;
+            height: 22rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .jumbotron {
+        h1 {
+            font-size: 2.7rem;
+        }
+
+        img#earth {
+            width: 19rem;
+            height: 19rem;
+        }
+    }
+}
+
+@media (max-width: 368px) {
+    .jumbotron {
+        h1 {
+            font-size: 2.1rem;
+        }
+
+        img#earth {
+            width: 17rem;
+            height: 17rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}

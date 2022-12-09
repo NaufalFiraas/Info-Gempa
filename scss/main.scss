@@ -1,2 +1,26 @@
 @use 'variables';
 @use 'globals';
+
+// JUMBOTRON
+@use 'modules/jumbotron/jumbotron';
+@use 'modules/jumbotron/jumbotronResponsive';
+
+// CONTENT WINDOW
+// General
+@use 'modules/content-window/general/contentWindowGeneral';
+@use 'modules/content-window/general/contentWindowGeneralResponsive';
+
+// Gempa Terkini
+@use 'modules/content-window/terkini/terkini';
+@use 'modules/content-window/terkini/terkiniResponsive';
+
+// Gempa Dirasakan
+@use 'modules/content-window/dirasakan/dirasakan';
+@use 'modules/content-window/dirasakan/dirasakanResponsive';
+
+// Credits
+@use 'modules/content-window/credits/credits';
+@use 'modules/content-window/credits/creditsResponsive';
+
+// maps
+@use 'modules/maps/maps';
