@@ -13,6 +13,7 @@ Adalah sebuah website untuk menampilkan data gempa bumi terkini, gempa bumi dira
     * CSS
     * SASS/SCSS
     * Javascript (AJAX, Modules, DOM)
+    * Maps (leafletjs)
 
 - Tools:
     * Figma
