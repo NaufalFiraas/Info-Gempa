@@ -10,7 +10,7 @@ export function showGempaTerkini(dataGempa) {
                     <p><strong>Wilayah:</strong> ${dataGempa.Wilayah}</p>
                     <p><strong>Potensi:</strong> ${dataGempa.Potensi}</p>
                 </div>
-                <a href="">
+                <a href="maps.html?lat=${dataGempa.Lintang}&long=${dataGempa.Bujur}&kedalaman=${dataGempa.Kedalaman}&magnitude=${dataGempa.Magnitude}&koordinat=${dataGempa.Coordinates}" target="_blank">
                     <button type="button" id="btn-show-maps" data-lintang="${dataGempa.Lintang}" data-bujur="${dataGempa.Bujur}" data-koordinat="${dataGempa.Coordinates}">Lihat Maps</button>
                 </a>
             </div>

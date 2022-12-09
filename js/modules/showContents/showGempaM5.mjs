@@ -12,7 +12,7 @@ export function showGempaM5(dataGempa) {
                         <p><strong>Lokasi:</strong> ${gempa.Wilayah}</p>
                         <p><strong>Potensi:</strong> ${gempa.Potensi}</p>
                     </div>
-                    <a href="">
+                    <a href="maps.html?lat=${gempa.Lintang}&long=${gempa.Bujur}&kedalaman=${gempa.Kedalaman}&magnitude=${gempa.Magnitude}&koordinat=${gempa.Coordinates}" target="_blank">
                         <button type="button" id="btn-maps" data-lintang="${gempa.Lintang}" data-bujur="${gempa.Bujur}" data-koordinat="${gempa.Coordinates}">Lihat Maps</button>
                     </a>
                 </div>`;
