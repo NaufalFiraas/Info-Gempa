@@ -1,6 +1,26 @@
+@use 'variables';
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding: 50px;
+    background: linear-gradient(to bottom, variables.$linearTop, variables.$linearBottom);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding: 50px 10px;
+    }
 }

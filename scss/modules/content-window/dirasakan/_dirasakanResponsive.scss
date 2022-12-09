@@ -1,0 +1,41 @@
+@media (max-width: 834px) {
+    .gempa-dirasakan-m5 {
+        .list-gempa {
+            .card-gempa {
+                max-width: 30%;
+                min-width: 300px ;
+                height: fit-content;
+                overflow-y: visible;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .gempa-dirasakan-m5 {
+        h2 {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .gempa-dirasakan-m5 {
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        .list-gempa {
+            .card-gempa {
+                min-width: 250px;
+
+                .info-list {
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
