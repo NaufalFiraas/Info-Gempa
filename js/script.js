@@ -34,7 +34,6 @@ for (let i = 0; i < headingBtns.length; i++) {
                 this.dataset.param,
                 (dataGempa) => {
                     contentContainer.classList.remove('gempa-terkini');
-                    contentContainer.classList.remove('gempa-terkini');
                     contentContainer.classList.remove('gempa-dirasakan-m5');
                     contentContainer.classList.remove('credits');
                     if (this.dataset.param === 'gempaterkini') {
