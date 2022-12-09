@@ -2,6 +2,9 @@
 
 .credits {
     padding: 2rem;
+    box-sizing: border-box;
+    height: 80vh;
+    overflow-y: scroll;
 
     h2 {
         text-align: center;

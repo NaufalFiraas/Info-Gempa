@@ -122,6 +122,7 @@ html {
   font-size: 1.3rem;
   font-weight: 600;
   color: #3d3d3d;
+  height: fit-content;
   cursor: pointer;
   padding: 15px 30px;
   text-align: center;
@@ -210,10 +211,14 @@ html {
   }
 }
 .gempa-terkini {
-  padding: 2rem;
-  height: 100%;
+  z-index: 99;
+  padding: 2rem 4rem;
+  height: 80vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .gempa-terkini .left {
   display: flex;
@@ -257,10 +262,18 @@ html {
 
 @media (max-width: 1100px) {
   .gempa-terkini {
-    flex-direction: column;
-    justify-content: center;
+    padding: 4rem 2rem;
+    display: block;
+  }
+  .gempa-terkini .left {
+    margin-bottom: 2rem;
     align-items: center;
-    gap: 3rem;
+  }
+  .gempa-terkini .right {
+    display: flex;
+  }
+  .gempa-terkini .right img {
+    margin: auto;
   }
 }
 @media (max-width: 750px) {
@@ -279,6 +292,9 @@ html {
   }
 }
 @media (max-width: 500px) {
+  .gempa-terkini {
+    padding: 4rem 2rem;
+  }
   .gempa-terkini .left h2 {
     font-size: 1.5rem;
   }
@@ -294,6 +310,9 @@ html {
   }
 }
 @media (max-width: 400px) {
+  .gempa-terkini {
+    padding: 4rem 2rem;
+  }
   .gempa-terkini .right img {
     width: 15rem;
     height: 15rem;
@@ -301,6 +320,9 @@ html {
 }
 .gempa-dirasakan-m5 {
   padding: 4rem 2rem;
+  overflow-y: scroll;
+  height: 80vh;
+  box-sizing: border-box;
 }
 .gempa-dirasakan-m5 h2 {
   text-align: center;
@@ -379,6 +401,9 @@ html {
 }
 .credits {
   padding: 2rem;
+  box-sizing: border-box;
+  height: 80vh;
+  overflow-y: scroll;
 }
 .credits h2 {
   text-align: center;
@@ -405,11 +430,6 @@ html {
   color: #11E2FF;
 }
 
-@media (max-width: 1100px) {
-  .credits {
-    height: 50vh;
-  }
-}
 @media (max-width: 450px) {
   .credits h2 {
     font-size: 1.9rem;
