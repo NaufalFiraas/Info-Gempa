@@ -1,3 +1,17 @@
+@media (max-width: 834px) {
+    .gempa-dirasakan-m5 {
+        .list-gempa {
+            .card-gempa {
+                max-width: 30%;
+                min-width: 300px ;
+                height: fit-content;
+                overflow-y: visible;
+                justify-content: center;
+            }
+        }
+    }
+}
+
 @media (max-width: 450px) {
     .gempa-dirasakan-m5 {
         h2 {

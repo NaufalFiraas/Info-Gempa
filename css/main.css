@@ -347,8 +347,9 @@ html {
 }
 .gempa-dirasakan-m5 .list-gempa .card-gempa {
   padding: 15px;
-  max-width: 30%;
-  min-width: 300px;
+  width: 300px;
+  height: 300px;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,6 +384,15 @@ html {
   border: 2px solid #11E2FF;
 }
 
+@media (max-width: 834px) {
+  .gempa-dirasakan-m5 .list-gempa .card-gempa {
+    max-width: 30%;
+    min-width: 300px;
+    height: fit-content;
+    overflow-y: visible;
+    justify-content: center;
+  }
+}
 @media (max-width: 450px) {
   .gempa-dirasakan-m5 h2 {
     font-size: 1.9rem;
