@@ -6,6 +6,11 @@ const headingMenu = document.getElementsByClassName('heading-menu')[0];
 const contentContainer = document.getElementsByClassName('content')[0];
 const headingBtns = document.querySelectorAll('.heading-menu li');
 
+// container data
+let gempaTerkini = null;
+let gempaDirasakan = [];
+let gempaM5 = [];
+
 toggleHeading.addEventListener('click', function () {
     this.classList.toggle('clicked');
     headingMenu.classList.toggle('clicked');
@@ -14,9 +19,12 @@ toggleHeading.addEventListener('click', function () {
 getAPI(
     'GET',
     'autogempa',
-    (dataGempa) => contentContainer.innerHTML = showGempaTerkini(dataGempa),
+    (dataGempa) => {
+        contentContainer.innerHTML = showGempaTerkini(dataGempa)
+        gempaTerkini = dataGempa;
+    },
     (err) => contentContainer.innerHTML = `<h2>${err}</h2>`,
-    () => { },
+    () => contentContainer.innerHTML = `<h2>Loading...</h2>`,
 );
 
 for (let i = 0; i < headingBtns.length; i++) {
@@ -28,31 +36,61 @@ for (let i = 0; i < headingBtns.length; i++) {
         }
         this.classList.add('active');
 
+        contentContainer.classList.remove('gempa-terkini');
+        contentContainer.classList.remove('gempa-dirasakan-m5');
+        contentContainer.classList.remove('credits');
         if (this.dataset.param !== '') {
-            getAPI(
-                'GET',
-                this.dataset.param,
-                (dataGempa) => {
-                    contentContainer.classList.remove('gempa-terkini');
-                    contentContainer.classList.remove('gempa-dirasakan-m5');
-                    contentContainer.classList.remove('credits');
-                    if (this.dataset.param === 'gempaterkini') {
-                        contentContainer.classList.add('gempa-dirasakan-m5');
-                        contentContainer.innerHTML = showGempaM5(dataGempa);
-                    } else if (this.dataset.param === 'gempadirasakan') {
-                        contentContainer.classList.add('gempa-dirasakan-m5');
-                        contentContainer.innerHTML = showGempaDirasakan(dataGempa);
-                    } else {
-                        contentContainer.classList.add('gempa-terkini');
-                        contentContainer.innerHTML = showGempaTerkini(dataGempa);
-                    }
-                },
-                (err) => contentContainer.innerHTML = `<h2>${err}</h2>`,
-                () => { },
-            );
+            // kalau diklik gempa m5
+            if (this.dataset.param === 'gempaterkini') {
+                contentContainer.classList.add('gempa-dirasakan-m5');
+                if (gempaM5.length > 0) {
+                    contentContainer.innerHTML = showGempaM5(gempaM5);
+                } else {
+                    getAPI(
+                        'GET',
+                        this.dataset.param,
+                        (dataGempa) => {
+                            contentContainer.innerHTML = showGempaM5(dataGempa);
+                            gempaM5 = dataGempa;
+                        },
+                        (err) => contentContainer.innerHTML = `<h2>${err}</h2>`,
+                        () => contentContainer.innerHTML = `<h2>Loading...</h2>`,
+                    );
+                }
+            } else if (this.dataset.param === 'gempadirasakan') {
+                contentContainer.classList.add('gempa-dirasakan-m5');
+                if (gempaDirasakan.length > 0) {
+                    contentContainer.innerHTML = showGempaDirasakan(gempaDirasakan);
+                } else {
+                    getAPI(
+                        'GET',
+                        this.dataset.param,
+                        (dataGempa) => {
+                            contentContainer.innerHTML = showGempaDirasakan(dataGempa);
+                            gempaDirasakan = dataGempa;
+                        },
+                        (err) => contentContainer.innerHTML = `<h2>${err}</h2>`,
+                        () => contentContainer.innerHTML = `<h2>Loading...</h2>`,
+                    );
+                }
+            } else {
+                contentContainer.classList.add('gempa-terkini');
+                if (gempaTerkini != null) {
+                    contentContainer.innerHTML = showGempaTerkini(gempaTerkini);
+                } else {
+                    getAPI(
+                        'GET',
+                        this.dataset.param,
+                        (dataGempa) => {
+                            contentContainer.innerHTML = showGempaTerkini(dataGempa);
+                            gempaTerkini = dataGempa;
+                        },
+                        (err) => contentContainer.innerHTML = `<h2>${err}</h2>`,
+                        () => contentContainer.innerHTML = `<h2>Loading...</h2>`,
+                    );
+                }
+            }
         } else {
-            contentContainer.classList.remove('gempa-dirasakan-m5');
-            contentContainer.classList.remove('gempa-terkini');
             contentContainer.classList.add('credits');
             contentContainer.innerHTML = showCredits();
         }
