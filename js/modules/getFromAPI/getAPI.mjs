@@ -18,6 +18,9 @@ export default function (method, param, success, error, loading) {
         }
     }
 
-    xhr.open(method, `https://data.bmkg.go.id/DataMKG/TEWS/${param}.json`);
+    xhr.open(method, `https://cors-anywhere.herokuapp.com/https://data.bmkg.go.id/DataMKG/TEWS/${param}.json`);
     xhr.send();
 }
+
+// for access temporary cors:
+// https://cors-anywhere.herokuapp.com/corsdemo
