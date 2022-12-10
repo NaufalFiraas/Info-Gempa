@@ -3,9 +3,8 @@
 .gempa-terkini {
     z-index: 99;
     padding: 2rem 4rem;
-    height: 80vh;
+    height: fit-content;
     box-sizing: border-box;
-    overflow-y: scroll;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +29,6 @@
                 font-size: 1.25rem;
                 letter-spacing: 5%;
             }
-
         }
 
         a {
